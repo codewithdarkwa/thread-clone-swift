@@ -36,11 +36,15 @@
 		527E627C2AD5900D00C25936 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E627B2AD5900D00C25936 /* LoginViewModel.swift */; };
 		527E627E2AD5978800C25936 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E627D2AD5978800C25936 /* User.swift */; };
 		527E62802AD59BA600C25936 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E627F2AD59BA600C25936 /* UserService.swift */; };
-		527E62832AD59D6E00C25936 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E62822AD59D6E00C25936 /* ProfileViewModel.swift */; };
 		52DD93CF2AD7FB0600288D1E /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD93CE2AD7FB0600288D1E /* ExploreViewModel.swift */; };
 		52DD93D12AD7FD4700288D1E /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD93D02AD7FD4700288D1E /* PreviewProvider.swift */; };
 		52DD93D62AD8025300288D1E /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD93D52AD8025300288D1E /* CurrentUserProfileView.swift */; };
 		52DD93DB2AD8034500288D1E /* CurrentProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD93DA2AD8034500288D1E /* CurrentProfileViewModel.swift */; };
+		52DD93DE2AD8388A00288D1E /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD93DD2AD8388A00288D1E /* ProfileHeaderView.swift */; };
+		52DD93E02AD83B1600288D1E /* UserContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD93DF2AD83B1600288D1E /* UserContentListView.swift */; };
+		52DD93E32AD8468100288D1E /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD93E22AD8468100288D1E /* EditProfileViewModel.swift */; };
+		52DD93E52AD848BA00288D1E /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD93E42AD848BA00288D1E /* ImageUploader.swift */; };
+		52DD93E82AD850C300288D1E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 52DD93E72AD850C300288D1E /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,11 +74,14 @@
 		527E627B2AD5900D00C25936 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		527E627D2AD5978800C25936 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		527E627F2AD59BA600C25936 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		527E62822AD59D6E00C25936 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		52DD93CE2AD7FB0600288D1E /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		52DD93D02AD7FD4700288D1E /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		52DD93D52AD8025300288D1E /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		52DD93DA2AD8034500288D1E /* CurrentProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentProfileViewModel.swift; sourceTree = "<group>"; };
+		52DD93DD2AD8388A00288D1E /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		52DD93DF2AD83B1600288D1E /* UserContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentListView.swift; sourceTree = "<group>"; };
+		52DD93E22AD8468100288D1E /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		52DD93E42AD848BA00288D1E /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +93,7 @@
 				527E626E2AD57D9D00C25936 /* FirebaseStorage in Frameworks */,
 				527E626A2AD57D9D00C25936 /* FirebaseFirestore in Frameworks */,
 				527E626C2AD57D9D00C25936 /* FirebaseFirestoreSwift in Frameworks */,
+				52DD93E82AD850C300288D1E /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				527E627F2AD59BA600C25936 /* UserService.swift */,
+				52DD93E42AD848BA00288D1E /* ImageUploader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -301,21 +310,21 @@
 		525CE78B2ACB5B4900AEF034 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				52DD93DC2AD8384000288D1E /* Components */,
 				52DD93D22AD801FF00288D1E /* CurrentUserProfile */,
-				527E62812AD59D5100C25936 /* ViewModel */,
 				527E62602AD568AB00C25936 /* EditProfile */,
 				527E625D2AD42D6300C25936 /* Model */,
-				525CE78C2ACB5B5600AEF034 /* Views */,
+				525CE78C2ACB5B5600AEF034 /* UserProfile */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		525CE78C2ACB5B5600AEF034 /* Views */ = {
+		525CE78C2ACB5B5600AEF034 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
 				525CE78D2ACB5B6700AEF034 /* ProfileView.swift */,
 			);
-			path = Views;
+			path = UserProfile;
 			sourceTree = "<group>";
 		};
 		527E62582AD4295300C25936 /* Components */ = {
@@ -338,6 +347,7 @@
 		527E62602AD568AB00C25936 /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
+				52DD93E12AD8465400288D1E /* ViewModel */,
 				527E62612AD568D100C25936 /* Views */,
 			);
 			path = EditProfile;
@@ -384,14 +394,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		527E62812AD59D5100C25936 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				527E62822AD59D6E00C25936 /* ProfileViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		52DD93CD2AD7FAF300288D1E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +427,23 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		52DD93DC2AD8384000288D1E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				52DD93DD2AD8388A00288D1E /* ProfileHeaderView.swift */,
+				52DD93DF2AD83B1600288D1E /* UserContentListView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		52DD93E12AD8465400288D1E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52DD93E22AD8468100288D1E /* EditProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -446,6 +465,7 @@
 				527E62692AD57D9D00C25936 /* FirebaseFirestore */,
 				527E626B2AD57D9D00C25936 /* FirebaseFirestoreSwift */,
 				527E626D2AD57D9D00C25936 /* FirebaseStorage */,
+				52DD93E72AD850C300288D1E /* Kingfisher */,
 			);
 			productName = "thread-clone";
 			productReference = 525CE7562ACB486300AEF034 /* thread-clone.app */;
@@ -477,6 +497,7 @@
 			mainGroup = 525CE74D2ACB486300AEF034;
 			packageReferences = (
 				527E62662AD57D9D00C25936 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				52DD93E62AD850C300288D1E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 525CE7572ACB486300AEF034 /* Products */;
 			projectDirPath = "";
@@ -510,19 +531,22 @@
 				525CE77A2ACB569A00AEF034 /* ThreadTabView.swift in Sources */,
 				527E62742AD582FB00C25936 /* AuthService.swift in Sources */,
 				52DD93D12AD7FD4700288D1E /* PreviewProvider.swift in Sources */,
+				52DD93E32AD8468100288D1E /* EditProfileViewModel.swift in Sources */,
 				527E62632AD568FE00C25936 /* EditProfileView.swift in Sources */,
 				525CE7722ACB49D700AEF034 /* LoginView.swift in Sources */,
 				527E62802AD59BA600C25936 /* UserService.swift in Sources */,
 				527E62572AD4207200C25936 /* ThreadCell.swift in Sources */,
 				525CE78A2ACB5B2900AEF034 /* ActivityView.swift in Sources */,
 				527E627C2AD5900D00C25936 /* LoginViewModel.swift in Sources */,
+				52DD93DE2AD8388A00288D1E /* ProfileHeaderView.swift in Sources */,
 				527E625A2AD429A400C25936 /* CircularProfileImageView.swift in Sources */,
 				527E625C2AD42A6900C25936 /* UserCell.swift in Sources */,
 				525CE7862ACB5ACF00AEF034 /* CreateThreadView.swift in Sources */,
 				527E625F2AD42D7F00C25936 /* ProfileThreadFilter.swift in Sources */,
+				52DD93E52AD848BA00288D1E /* ImageUploader.swift in Sources */,
 				527E627A2AD5896E00C25936 /* ContentViewModel.swift in Sources */,
+				52DD93E02AD83B1600288D1E /* UserContentListView.swift in Sources */,
 				52DD93DB2AD8034500288D1E /* CurrentProfileViewModel.swift in Sources */,
-				527E62832AD59D6E00C25936 /* ProfileViewModel.swift in Sources */,
 				525CE75C2ACB486300AEF034 /* ContentView.swift in Sources */,
 				525CE75A2ACB486300AEF034 /* thread_cloneApp.swift in Sources */,
 				52DD93D62AD8025300288D1E /* CurrentUserProfileView.swift in Sources */,
@@ -740,6 +764,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		52DD93E62AD850C300288D1E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -762,6 +794,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 527E62662AD57D9D00C25936 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		52DD93E72AD850C300288D1E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52DD93E62AD850C300288D1E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

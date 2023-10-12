@@ -11,6 +11,7 @@ import Combine
 class CurrentUserProfileViewModel: ObservableObject{
     @Published var currentUser: User?
     
+    
     private var cancellables = Set<AnyCancellable>()
     
     init(){
@@ -22,4 +23,6 @@ class CurrentUserProfileViewModel: ObservableObject{
             self?.currentUser = user
         }.store(in: &cancellables)
     }
+    
+    
 }
