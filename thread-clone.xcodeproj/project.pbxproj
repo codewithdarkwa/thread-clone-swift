@@ -45,6 +45,10 @@
 		52DD93E32AD8468100288D1E /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD93E22AD8468100288D1E /* EditProfileViewModel.swift */; };
 		52DD93E52AD848BA00288D1E /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD93E42AD848BA00288D1E /* ImageUploader.swift */; };
 		52DD93E82AD850C300288D1E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 52DD93E72AD850C300288D1E /* Kingfisher */; };
+		52DD93EA2AD85D9500288D1E /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD93E92AD85D9500288D1E /* Thread.swift */; };
+		52DD93ED2AD85E7F00288D1E /* CreateThreadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD93EC2AD85E7F00288D1E /* CreateThreadViewModel.swift */; };
+		52DD93EF2AD85EC100288D1E /* ThreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD93EE2AD85EC100288D1E /* ThreadService.swift */; };
+		52DD93F32AD8678D00288D1E /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD93F22AD8678D00288D1E /* FeedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +86,10 @@
 		52DD93DF2AD83B1600288D1E /* UserContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentListView.swift; sourceTree = "<group>"; };
 		52DD93E22AD8468100288D1E /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		52DD93E42AD848BA00288D1E /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		52DD93E92AD85D9500288D1E /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
+		52DD93EC2AD85E7F00288D1E /* CreateThreadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadViewModel.swift; sourceTree = "<group>"; };
+		52DD93EE2AD85EC100288D1E /* ThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadService.swift; sourceTree = "<group>"; };
+		52DD93F22AD8678D00288D1E /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +162,7 @@
 			children = (
 				527E627F2AD59BA600C25936 /* UserService.swift */,
 				52DD93E42AD848BA00288D1E /* ImageUploader.swift */,
+				52DD93EE2AD85EC100288D1E /* ThreadService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -170,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				527E627D2AD5978800C25936 /* User.swift */,
+				52DD93E92AD85D9500288D1E /* Thread.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,6 +254,7 @@
 		525CE77B2ACB59DC00AEF034 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				52DD93F02AD8675D00288D1E /* ViewModel */,
 				525CE77C2ACB59F400AEF034 /* Views */,
 			);
 			path = Feed;
@@ -278,6 +289,7 @@
 		525CE7832ACB5A8E00AEF034 /* ThreadCreation */ = {
 			isa = PBXGroup;
 			children = (
+				52DD93EB2AD85E5C00288D1E /* ViewModel */,
 				525CE7842ACB5AAD00AEF034 /* Views */,
 			);
 			path = ThreadCreation;
@@ -444,6 +456,22 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		52DD93EB2AD85E5C00288D1E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52DD93EC2AD85E7F00288D1E /* CreateThreadViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52DD93F02AD8675D00288D1E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52DD93F22AD8678D00288D1E /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -527,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				525CE77E2ACB5A1100AEF034 /* FeedView.swift in Sources */,
+				52DD93EA2AD85D9500288D1E /* Thread.swift in Sources */,
 				527E62722AD5811400C25936 /* RegistrationViewModel.swift in Sources */,
 				525CE77A2ACB569A00AEF034 /* ThreadTabView.swift in Sources */,
 				527E62742AD582FB00C25936 /* AuthService.swift in Sources */,
@@ -539,9 +568,11 @@
 				525CE78A2ACB5B2900AEF034 /* ActivityView.swift in Sources */,
 				527E627C2AD5900D00C25936 /* LoginViewModel.swift in Sources */,
 				52DD93DE2AD8388A00288D1E /* ProfileHeaderView.swift in Sources */,
+				52DD93ED2AD85E7F00288D1E /* CreateThreadViewModel.swift in Sources */,
 				527E625A2AD429A400C25936 /* CircularProfileImageView.swift in Sources */,
 				527E625C2AD42A6900C25936 /* UserCell.swift in Sources */,
 				525CE7862ACB5ACF00AEF034 /* CreateThreadView.swift in Sources */,
+				52DD93F32AD8678D00288D1E /* FeedViewModel.swift in Sources */,
 				527E625F2AD42D7F00C25936 /* ProfileThreadFilter.swift in Sources */,
 				52DD93E52AD848BA00288D1E /* ImageUploader.swift in Sources */,
 				527E627A2AD5896E00C25936 /* ContentViewModel.swift in Sources */,
@@ -556,6 +587,7 @@
 				525CE7742ACB4F6500AEF034 /* RegistrationView.swift in Sources */,
 				52DD93CF2AD7FB0600288D1E /* ExploreViewModel.swift in Sources */,
 				527E627E2AD5978800C25936 /* User.swift in Sources */,
+				52DD93EF2AD85EC100288D1E /* ThreadService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
