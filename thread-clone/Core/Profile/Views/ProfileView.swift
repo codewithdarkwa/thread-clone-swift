@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ProfileView: View {
+    let user: User
+    
     @State private var selectedFilter: ProfileThreadFilter = .threads
     @Namespace var animation
     
     
-    let user:User
     var body: some View {
         ScrollView(showsIndicators: false) {
             //Bio and stats
