@@ -36,7 +36,9 @@ struct CurrentUserProfileView: View {
                             }
                     }
                     // user content list view
-                    UserContentListView()
+                    if let user = currentUser {
+                        UserContentListView(user: user)
+                    }
                 }
 //
             }
@@ -46,16 +48,16 @@ struct CurrentUserProfileView: View {
                 }
                 
             })
-//            .toolbar(){
-//                ToolbarItem(placement: .navigationBarTrailing){
-//                    Button{
-//                        AuthService.shared.signOut()
-//                    } label: {
-//                        Image(systemName: "line.3.horizontal")
-//                            .foregroundColor(.black)
-//                    }
-//                }
-//            }
+            .toolbar(){
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button{
+                        AuthService.shared.signOut()
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                            .foregroundColor(.black)
+                    }
+                }
+            }
             .padding(.horizontal)
         }
     }

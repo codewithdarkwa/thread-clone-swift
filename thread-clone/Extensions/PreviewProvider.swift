@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 extension PreviewProvider{
     static var dev: DeveloperPreview{
@@ -23,4 +24,10 @@ class DeveloperPreview{
         email: "junior@gmail.com",
         username: "junior"
     )
+    
+    let thread = Thread(
+        ownerUid: "123",
+        caption: "This is a test thread",
+        timeStamp: Timestamp(),
+        likes: 0)
 }

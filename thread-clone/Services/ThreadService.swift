@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import FirebaseFirestore
+import Firebase
 import FirebaseFirestoreSwift
 struct ThreadService{
     
@@ -19,9 +19,20 @@ struct ThreadService{
         let snapshot = try await
         Firestore.firestore()
             .collection("threads")
-            .order(by:"timestamp", descending: true)
+            .order(by:"timeStamp", descending: true)
+            .getDocuments()
+        print("Snapshot: \(snapshot)")
+        print("Documents: \(snapshot.documents)")
+        return snapshot.documents.compactMap({try? $0.data(as: Thread.self)})
+    }
+    
+    static func fetchUserThreads(uid: String) async throws -> [Thread]{
+        let snapshot = try await Firestore.firestore()
+            .collection("threads")
+            .whereField("ownerUid", isEqualTo: uid)
             .getDocuments()
         
-        return snapshot.documents.compactMap({try? $0.data(as: Thread.self)})
+        let threads = snapshot.documents.compactMap({try? $0.data(as: Thread.self)})
+        return threads.sorted(by: {$0.timeStamp.dateValue() > $1.timeStamp.dateValue()})
     }
 }

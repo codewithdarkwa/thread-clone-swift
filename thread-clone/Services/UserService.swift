@@ -34,6 +34,11 @@ class UserService{
         return users.filter({$0.id != CurrentUid})
     }
     
+    static func fetchUser(withUid uid: String) async throws ->User{
+        let snapshot = try await Firestore.firestore().collection("threads").document(uid).getDocument()
+        return try snapshot.data(as: User.self)
+    }
+    
     func reset(){
         self.currentUser = nil
     }
@@ -43,7 +48,7 @@ class UserService{
         guard let currentUid = Auth.auth().currentUser?.uid else {return}
         
         try await Firestore.firestore().collection("users").document(currentUid).updateData([
-            "profileImageUrl" :imageUrl
+            "ProfileImageUrl" :imageUrl
         ])
         self.currentUser?.ProfileImageUrl = imageUrl
     }
